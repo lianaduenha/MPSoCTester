@@ -1,5 +1,0 @@
-# Script Tester MPSoCBench
-# cada configuração tem que ficar em []
-# nao usar mais de um parametro x
-
-[-p=mips -i=router.lt -n=%x% -s=sha -r, x=1:2]

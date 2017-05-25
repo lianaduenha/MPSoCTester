@@ -20,7 +20,6 @@
 
 
 # Avaliação das aplicacoes, acredito que ira executar para mais de 15 aplicacoes
-[-p=arm -i=router.lt -n=4 -s=%x% -r, x=basicmath:dijkstra:fft:hello_world_mutex:lu:multi_8:multi_16:multi_network_automotive:multi_office_telecomm:multi_parallel:multi_security:sha:stringsearch:susancorners:susanedges:susansmoothing:water:water_spatial]
+[-p=arm -i=router.lt -n=4 -s=%x% -r, x=basicmath:dijkstra:fft:lu:stringsearch:susancorners:susanedges:susansmoothing:water:water_spatial]
 
-[-p=arm -i=router.lt -n=8 -s=multi_8 -r]
-[-p=arm -i=router.lt -n=16 -s=multi_16 -r]
+
