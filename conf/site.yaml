@@ -1,0 +1,39 @@
+
+# S{RANDOM}     : Random number up to 9999
+# ${SCRIPTROOT} : MPSoCTester path
+
+MPSoCTester:
+    workspace    : ${SCRIPTROOT}tmp/TEMP${RANDOM}
+    html output  : ${SCRIPTROOT}/../public_html/MPSoCTester
+    comment: --
+
+archc:
+    link/path: https://github.com/archc/archc.git    
+    branch: master
+    
+systemc:
+    link/path: https://github.com/ArchC/SystemC.git
+    branch: 2.3.1a
+    
+
+mpsocbench:
+    link/path: https://github.com/ArchC/MPSoCBench.git
+    branch: master
+       
+models:
+    mips:
+        link/path : http://archc.lsc.ic.unicamp.br/downloads/Tools/mips/archc_mips_toolchain_20141215_64bit.tar.bz2
+        branch    : --
+        
+    arm:
+        link/path : http://archc.lsc.ic.unicamp.br/downloads/Tools/arm/archc_arm_toolchain_20150102_64bit.tar.bz2
+        branch    : --
+    
+    powerpc:
+        link/path : http://archc.lsc.ic.unicamp.br/downloads/Tools/powerpc/archc_powerpc_toolchain_20141215_64bit.tar.bz2
+        branch    : --
+    
+    sparc:
+        link/path : http://archc.lsc.ic.unicamp.br/downloads/Tools/sparc/archc_sparc_toolchain_20141215_64bit.tar.bz2
+        branch    : --
+

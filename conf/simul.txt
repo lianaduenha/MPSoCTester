@@ -1,0 +1,26 @@
+# Script Tester MPSoCBench
+# cada configuração tem que ficar em []
+# nao usar mais de um parametro x
+
+# Avaliacao das funcionalidades multicore, espero 7 simulacoes
+[-p=mips -i=router.lt -n=%x% -s=sha -r, x=1:2:4:8:16:32:64]
+
+
+# Avaliacao das funcionalidades nos diversos cores, espero 4 simulacoes
+[-p=%x% -i=router.lt -n=4 -s=sha -r, x=mips:sparc:powerpc:arm]
+
+# Avaliacao das funcionalidades nas diferentes interconxoes, espero 3 simulacoes
+[-p=powerpc -i=%x% -n=4 -s=stringsearch -r, x=router.lt:noc.lt:noc.at]
+
+
+# Avaliacao de consumo potencia e energia, espero 2 simulacoes
+[-p=mips -i=router.lt -n=4 -s=stringsearch -pw -r]
+[-p=sparc -i=router.lt -n=4 -s=stringsearch -pw -r]
+
+
+
+# Avaliação das aplicacoes, acredito que ira executar para mais de 15 aplicacoes
+[-p=arm -i=router.lt -n=4 -s=%x% -r, x=basicmath:dijkstra:fft:hello_world_mutex:lu:multi_8:multi_16:multi_network_automotive:multi_office_telecomm:multi_parallel:multi_security:sha:stringsearch:susancorners:susanedges:susansmoothing:water:water_spatial]
+
+[-p=arm -i=router.lt -n=8 -s=multi_8 -r]
+[-p=arm -i=router.lt -n=16 -s=multi_16 -r]
